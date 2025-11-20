@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<div class="hero text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Bonjour, je suis <span class="text-primary">Seynabou</span></h1>
+        <p class="lead fs-2 mt-3">Développeuse web en formation • Passionnée • Créative</p>
+        <a href="{{ path('app_about') }}" class="btn btn-primary btn-lg mt-4">Découvrir mon parcours</a>
+        <a href="{{ path('app_projects') }}" class="btn btn-outline-light btn-lg mt-4 ms-3">Voir mes projets</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h3>Projets</h3>
+            <p>Des applications concrètes réalisées en Symfony, PHP, JavaScript…</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Compétences</h3>
+            <p>Symfony • Bootstrap • MySQL • Git • API REST…</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Contact</h3>
+            <p>Un projet ? Une question ? Je suis dispo !</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
