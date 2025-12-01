@@ -5,7 +5,7 @@ IUT de Roanne
 
 🔗 **Mon portfolio complet**   
 📧  seynabounabyndaw@gmail.com    
-💼 [Télécharger mon CV (PDF)]"C:\Users\HP\Downloads\Edition du CV.html"
+💼 [Télécharger mon CV (PDF)]
 
 ---
 
