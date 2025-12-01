@@ -5,7 +5,7 @@ IUT de Roanne
 
 🔗 **Mon portfolio complet**   
 📧  seynabounabyndaw@gmail.com    
-💼 [Télécharger mon CV (PDF)]
+💼  
 
 ---
 
@@ -26,12 +26,7 @@ IUT de Roanne
 ---
 
 ## 📌 À propos de moi
-[Écris 4-5 lignes courtes ici → ta personnalité, tes motivations, ce que tu aimes dans l’informatique, ce que tu veux faire plus tard…]
-
-Exemple :  
-Passionné par le développement web et la cybersécurité, j’aime créer des applications utiles et bien sécurisées. Après mon BTS, je souhaite continuer en licence pro ou alternance en tant que développeur full-stack / administrateur systèmes et réseaux.
-
+Passionnée par le développement web et la cybersécurité, j’aimerais créer des applications utiles et bien sécurisées. Après mon BUT, je souhaite continuer en Cycle Ingénieur afin d'étandre mes connaissances.
 ---
 
-*Portfolio mis à jour le 01 décembre 2025*  
-Fait avec ❤️ et GitHub Pages
+
