@@ -3,106 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Portfolio - Seynabou Naby NDAW</title>
+    <title>Portfolio - Seynabou Naby NDAW</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 50%, #fae8ff 100%);
             color: #581c87;
-            transition: all 0.5s ease;
             font-family: 'Montserrat', sans-serif;
             min-height: 100vh;
-            margin: 0;
         }
-        .dark-mode {
-            background: linear-gradient(135deg, #fa8be9ff 0%, #f65cd7ff 50%, #f3b5fdff 100%);
-            color: #f3e8ff;
+        
+        /* Onglets Violets en harmonie avec le thème */
+        .nav-pills .nav-link.active {
+            background: linear-gradient(90deg, #c084fc, #db2777) !important;
+            color: white !important;
+            box-shadow: 0 4px 15px rgba(192, 132, 252, 0.4);
         }
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
+        .nav-pills .nav-link {
+            color: #6b21a8;
+            font-weight: 600;
         }
-        .navbar {
-            background: rgba(253, 242, 248, 0.9);
-            backdrop-filter: blur(10px);
-        }
-        .dark-mode .navbar {
-            background: rgba(167, 139, 250, 0.3);
-        }
-        .nav-link {
-            font-weight: 500;
-            color: #6b21a8 !important;
-            font-size: 1.1rem;
-        }
-        .dark-mode .nav-link {
-            color: #f3e8ff !important;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #c084fc !important;
-        }
-        .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: #6b21a8 !important;
-        }
-        .dark-mode .navbar-brand {
-            color: #f3e8ff !important;
-        }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.7);
-            border: none;
-            box-shadow: 0 8px 32px rgba(200, 132, 252, 0.2);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .dark-mode .card {
-            background: rgba(167, 139, 250, 0.2);
-        }
-        .project-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
+
+        /* Remplacez la partie correspondante dans votre bloc <style> */
+
+/* Style de la Navbar pour correspondre à votre capture d'écran */
+.navbar {
+    background: rgba(253, 242, 248, 0.9) !important;
+    backdrop-filter: blur(10px);
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem !important; /* Plus grand comme sur l'image */
+    color: #6b21a8 !important;
+    font-weight: 700 !important;
+}
+
+.nav-link {
+    font-size: 1.4rem !important; /* Taille augmentée pour les menus */
+    color: #6b21a8 !important;
+    font-weight: 500 !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+/* Style spécifique pour le menu actif (ex: CV quand on est sur la page CV) */
+.nav-link.active {
+    color: #c084fc !important; /* Violet plus clair/lumineux pour l'élément sélectionné */
+    background: transparent !important;
+}
+
+.nav-link:hover {
+    color: #db2777 !important; /* Un léger changement au survol */
+}
+
+/* Ajustement pour le bouton Thème qui chevauche */
+.theme-toggle {
+    top: 30px !important;
+    right: 30px !important;
+}
+        .global-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-left: 6px solid #c084fc;
+            padding: 25px;
             border-radius: 15px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(200, 132, 252, 0.1);
         }
-        footer {
-            background: rgba(253, 242, 248, 0.8);
-            padding: 20px 0;
-            font-size: 0.9rem;
+
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.6);
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 15px !important;
+            overflow: hidden;
         }
-        .dark-mode footer {
-            background: rgba(167, 139, 250, 0.3);
+
+        .action-btn {
+            width: 100%;
+            text-align: left;
+            background: white;
+            border: 1px solid #e9d5ff;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 10px;
+            color: #6b21a8;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .action-btn:hover { background: #f3e8ff; border-color: #c084fc; }
+
+        .btn-violet {
+            background: #c084fc;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .btn-violet:hover { background: #a855f7; color: white; transform: scale(1.05); }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 5px;
+            border-left: 3px solid #db2777;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Switch Thème -->
-    <div class="theme-toggle">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="themeToggle">
-            <label class="form-check-label" for="themeToggle">🌙</label>
-        </div>
-    </div>
-
-    <!-- Menu fixe -->
     <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">Seynabou Naby NDAW</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
@@ -116,103 +135,133 @@
     </nav>
 
     <div class="container mt-5 pt-5">
-        <h1 class="text-center section-title">Mon E-Portfolio de Compétences</h1>
+        <h1 class="text-center my-5 fw-bold" style="font-family: 'Playfair Display'; font-size: 3rem; font-style: italic;">Portfolio de Compétences</h1>
 
-        <!-- Introduction -->
-        <section class="my-5 text-center">
-            <p class="lead fs-3">
-                Bienvenue dans mon E-portfolio ! Ici, je présente mes compétences, mes projets, mes passions et mes réalisations en Réseaux et Télécommunications.<br>
-                Ce portfolio met en valeur mon apprentissage, mes initiatives et mes réflexions analytiques.
-            </p>
-        </section>
+        <ul class="nav nav-pills nav-justified mb-5 p-2 bg-white bg-opacity-50 rounded-pill shadow-sm" id="pills-tab" role="tablist">
+            <li class="nav-item"><button class="nav-link active rounded-pill" data-bs-toggle="pill" data-bs-target="#admin">ADMINISTRER</button></li>
+            <li class="nav-item"><button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#connect">CONNECTER</button></li>
+            <li class="nav-item"><button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#prog">PROGRAMMER</button></li>
+        </ul>
 
-        <!-- Bouton vers ton Drive -->
-        <section class="my-5 text-center">
-            <p class="lead fs-3 mb-4">
-                Accédez à toutes mes preuves, photos, captures d'écran et analyses réflexives :
-            </p>
-            <a href="https://drive.google.com/drive/folders/1xEbnVkWAZ0e6778rXl0jkOnyR_4pToGM?usp=drive_link" target="_blank" class="btn btn-pastel btn-lg shadow-lg px-5 py-3">
-                Voir mon E-portfolio complet sur Google Drive →
-            </a>
-        </section>
-
-        <!-- Galerie de projets avec tes images réelles -->
-        <section class="my-5">
-            <h2 class="text-center section-title">Exemples de réalisations</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 text-center h-100">
-                        <img src="images/projet1.jpg" alt="Projet 1" class="img-fluid rounded shadow mx-auto d-block mb-4" style="max-height: 300px; object-fit: cover;">
-                        <h5 class="mt-3">Audit WIFI</h5>
+        <div class="tab-content">
+            
+            <div class="tab-pane fade show active" id="admin">
+                <div class="global-card">
+                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Administrer</h4>
+                    <p>L'administration système permet de garantir la disponibilité et la sécurité des services informatiques au sein d'une infrastructure.</p>
+                    <button class="btn btn-violet" onclick="toggleSection('global-admin-proof')">Voir Preuve Globale</button>
+                    <div id="global-admin-proof" class="content-box">
+                        <strong>Synthèse :</strong> Rapport sur le déploiement de services réseaux sécurisés.
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 text-center h-100">
-                        <img src="images/projet2.jpg" alt="Projet 2" class="img-fluid rounded shadow mx-auto d-block mb-4" style="max-height: 300px; object-fit: cover;">
-                        <h5 class="mt-3">Mesures Câbles Cuivres</h5>
+
+                <div class="accordion" id="accAdmin">
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac11">AC 1.1 : Administrer des systèmes informatiques</button></h2>
+                        <div id="ac11" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac11p')">📂 Voir Preuve (Windows Server)</button>
+                                <div id="ac11p" class="content-box">Installation Active Directory et configuration DNS/IIS.</div>
+                                <button class="action-btn" onclick="toggleSection('ac11a')">💡 Voir Analyse Réflexive</button>
+                                <div id="ac11a" class="content-box">Réflexion sur la centralisation de la gestion des utilisateurs.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac12">AC 1.2 : Maîtriser les outils de virtualisation</button></h2>
+                        <div id="ac12" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac12p')">📂 Voir Preuve (Docker)</button>
+                                <div id="ac12p" class="content-box">Déploiement de conteneurs Nginx et gestion de volumes.</div>
+                                <button class="action-btn" onclick="toggleSection('ac12a')">💡 Voir Analyse Réflexive</button>
+                                <div id="ac12a" class="content-box">Avantages de l'isolation des services via la conteneurisation.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card p-4 text-center h-100">
-                        <img src="images/projet3.jpg" alt="Projet 3" class="img-fluid rounded shadow mx-auto d-block mb-4" style="max-height: 300px; object-fit: cover;">
-                        <h5 class="mt-3">Simulation devis rénovation</h5>
-                        <p>Devis pour la salle G007</p>
-                    </div>
-                </div>
-                <!-- Ajoute d'autres projets ici si tu as plus de photos -->
             </div>
-        </section>
 
-        <!-- Analyse réflexive -->
-        <section class="my-5 pb-5">
-            <h2 class="text-center section-title">Analyse réflexive</h2>
-            <div class="card p-5">
-                <p class="lead text-center">
-                    Analyse réflexive – SAE1.5<br>
-                    Dans ce projet, j’ai mobilisé des pratiques professionnelles et techniques pour réaliser un audit complet: analyse WiFi du réseau eduroam, mesures de câbles cuivres et simulation de devis de la salle G007.
-                    Audit WiFi : J’ai utilisé un outil de diagnostic WiFi (NetScout) pour mesurer la force du signal, les interférences et la couverture. J’ai identifié les zones faibles et proposé des solutions (ajout de points d’accès). Cette pratique montre ma capacité à analyser un environnement réel et à diagnostiquer des problèmes réseau.
-                    Mesures câbles cuivres : J’ai pris le Fluke DSX pour tester les câbles RJ45 : longueur, débits, continuité. Toutes les mesures étaient dans les normes Cat 6A. J’ai documenté chaque résultat avec des captures d’écran. Cela démontre ma rigueur dans les tests physiques et ma connaissance des standards câblage.
-                    Simulation devis : J’ai recherché les références Legrand sur leur catalogue, calculé les quantités (baie 42U, panneaux 24 ports, câbles Cat 6A, prises RJ45, goulottes) et fait un tableau HT/TTC avec main d’œuvre (3 techniciens, 25€/h, 5 jours). Total : 15 086,32 € HT. J’ai présenté un devis professionnel avec conditions de paiement.
-                    Ces pratiques m’ont permis de travailler en autonomie : recherche de prix, utilisation d’outils pro, documentation photo. J’ai été rigoureuse pour éviter les erreurs (double vérification des mesures, calculs précis). Ce projet renforce mes compétences en diagnostic réseau, tests câblage et chiffrage, essentielles pour mon métier de rêve : ingénieure infrastructures télécoms réseaux mobiles. Je suis prête pour des missions terrain réelles !
-                    Pratiques clés mobilisées :
+            <div class="tab-pane fade" id="connect">
+                <div class="global-card">
+                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Connecter</h4>
+                    <p>Maîtrise des protocoles de communication et configuration des équipements d'interconnexion pour assurer le transport des données.</p>
+                    <button class="btn btn-violet" onclick="toggleSection('global-connect-proof')">Voir Preuve Globale</button>
+                    <div id="global-connect-proof" class="content-box">
+                        <strong>Synthèse :</strong> Dossier technique d'une infrastructure réseau complète.
+                    </div>
+                </div>
 
-                    Diagnostic et mesure : Fluke DSX, outils WiFi.
-                    Recherche et chiffrage : Catalogue Legrand, Excel pour tableau.
-                    Documentation : Photos, captures, rapport clair.
-                    Rigueur : Normes Cat 6A, double vérification.
-
-                    Ce projet me motive à aller plus loin dans les réseaux !
-                    Je continue à explorer les nouvelles technologies en télécommunications pour m'améliorer chaque jour.
-                </p>
+                <div class="accordion" id="accConnect">
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac21">AC 2.1 : Configurer les équipements réseaux</button></h2>
+                        <div id="ac21" class="accordion-collapse collapse" data-bs-parent="#accConnect">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac21p')">📂 Voir Preuve (Cisco)</button>
+                                <div id="ac21p" class="content-box">Configuration VLAN, routage inter-VLAN et NAT sous Packet Tracer.</div>
+                                <button class="action-btn" onclick="toggleSection('ac21a')">💡 Voir Analyse Réflexive</button>
+                                <div id="ac21a" class="content-box">Étude sur la segmentation pour la performance réseau.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac22">AC 2.2 : Déployer des liens de télécommunications</button></h2>
+                        <div id="ac22" class="accordion-collapse collapse" data-bs-parent="#accConnect">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac22p')">📂 Voir Preuve (Transmission)</button>
+                                <div id="ac22p" class="content-box">Étude du multiplexage optique et mesures sur fibre.</div>
+                                <button class="action-btn" onclick="toggleSection('ac22a')">💡 Voir Analyse Réflexive</button>
+                                <div id="ac22a" class="content-box">Analyse des supports de transmission haut débit.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <div class="tab-pane fade" id="prog">
+                <div class="global-card">
+                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Programmer</h4>
+                    <p>Développement de solutions logicielles et scripts d'automatisation pour optimiser les tâches d'ingénierie réseau.</p>
+                    <button class="btn btn-violet" onclick="toggleSection('global-prog-proof')">Voir Preuve Globale</button>
+                    <div id="global-prog-proof" class="content-box">
+                        <strong>Synthèse :</strong> Portfolio de projets de développement (Python, Web).
+                    </div>
+                </div>
+
+                <div class="accordion" id="accProg">
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac31">AC 3.1 : Développer des outils informatiques</button></h2>
+                        <div id="ac31" class="accordion-collapse collapse" data-bs-parent="#accProg">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac31p')">📂 Voir Preuve (Python)</button>
+                                <div id="ac31p" class="content-box">Scripts d'automatisation pour le calcul d'adresses IP.</div>
+                                <button class="action-btn" onclick="toggleSection('ac31a')">💡 Voir Analyse Réflexive</button>
+                                <div id="ac31a" class="content-box">Comment le code simplifie l'administration quotidienne.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac32">AC 3.2 : Concevoir des applications Web</button></h2>
+                        <div id="ac32" class="accordion-collapse collapse" data-bs-parent="#accProg">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac32p')">📂 Voir Preuve (Web)</button>
+                                <div id="ac32p" class="content-box">Conception de ce portfolio en responsive design.</div>
+                                <button class="action-btn" onclick="toggleSection('ac32a')">💡 Voir Analyse Réflexive</button>
+                                <div id="ac32a" class="content-box">Importance de l'ergonomie (UX/UI) pour l'utilisateur.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <!-- Pied de page -->
-    <footer class="text-center py-4">
-        <p>© 2026 Seynabou Naby NDAW - Tous droits réservés<br>
-        <small>Ce site est protégé par les lois sur le droit d'auteur. Toute reproduction interdite sans autorisation.</small></p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const toggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            toggle.checked = true;
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.style.display = (section.style.display === "block") ? "none" : "block";
         }
-
-        toggle.addEventListener('change', () => {
-            if (toggle.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
-        });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
