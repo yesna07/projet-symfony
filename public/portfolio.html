@@ -14,58 +14,35 @@
             min-height: 100vh;
         }
         
-        /* Onglets Violets en harmonie avec le thème */
+        .navbar {
+            background: rgba(253, 242, 248, 0.9) !important;
+            backdrop-filter: blur(10px);
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem !important;
+            color: #6b21a8 !important;
+            font-weight: 700 !important;
+        }
+
+        .nav-link {
+            font-size: 1.2rem !important;
+            color: #6b21a8 !important;
+            font-weight: 500 !important;
+            margin-left: 15px;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
         .nav-pills .nav-link.active {
             background: linear-gradient(90deg, #c084fc, #db2777) !important;
             color: white !important;
             box-shadow: 0 4px 15px rgba(192, 132, 252, 0.4);
         }
-        .nav-pills .nav-link {
-            color: #6b21a8;
-            font-weight: 600;
-        }
 
-        /* Remplacez la partie correspondante dans votre bloc <style> */
-
-/* Style de la Navbar pour correspondre à votre capture d'écran */
-.navbar {
-    background: rgba(253, 242, 248, 0.9) !important;
-    backdrop-filter: blur(10px);
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-}
-
-.navbar-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem !important; /* Plus grand comme sur l'image */
-    color: #6b21a8 !important;
-    font-weight: 700 !important;
-}
-
-.nav-link {
-    font-size: 1.4rem !important; /* Taille augmentée pour les menus */
-    color: #6b21a8 !important;
-    font-weight: 500 !important;
-    margin-left: 15px;
-    margin-right: 15px;
-    transition: 0.3s;
-}
-
-/* Style spécifique pour le menu actif (ex: CV quand on est sur la page CV) */
-.nav-link.active {
-    color: #c084fc !important; /* Violet plus clair/lumineux pour l'élément sélectionné */
-    background: transparent !important;
-}
-
-.nav-link:hover {
-    color: #db2777 !important; /* Un léger changement au survol */
-}
-
-/* Ajustement pour le bouton Thème qui chevauche */
-.theme-toggle {
-    top: 30px !important;
-    right: 30px !important;
-}
         .global-card {
             background: rgba(255, 255, 255, 0.8);
             border-left: 6px solid #c084fc;
@@ -95,7 +72,6 @@
             font-weight: 500;
             transition: 0.3s;
         }
-        .action-btn:hover { background: #f3e8ff; border-color: #c084fc; }
 
         .btn-violet {
             background: #c084fc;
@@ -105,66 +81,41 @@
             border-radius: 50px;
             transition: 0.3s;
         }
-        .btn-violet:hover { background: #a855f7; color: white; transform: scale(1.05); }
 
         .content-box {
             background: rgba(255, 255, 255, 0.5);
             padding: 20px;
             border-radius: 10px;
-            margin-top: 5px;
+            margin-top: 10px;
             border-left: 3px solid #db2777;
             display: none;
-        
+        }
+
         .document-paper {
             background-color: white;
-            color: #333; /* Texte sombre pour la lisibilité sur fond blanc */
-            padding: 40px;
-            margin: 20px auto;
-            border-radius: 2px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Ombre pour l'effet de relief */
-            font-family: 'Times New Roman', serif; /* Optionnel : pour l'aspect rapport de stage */
+            color: #333;
+            padding: 30px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-family: 'Times New Roman', serif;
             line-height: 1.6;
-            max-width: 900px;
             border: 1px solid #e0e0e0;
-}
+        }
 
         .document-paper h3 {
             border-bottom: 2px solid #6b21a8;
             padding-bottom: 10px;
             margin-top: 20px;
             color: #6b21a8;
-}       
-        .preuve-img-container {
-            width: 100%;
-            height: 200px; /* Force la même hauteur pour tous les blocs */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8f9fa;
-            border-radius: 8px;
-            margin-bottom: 15px;
-}
-
-        .preuve-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Empêche la déformation des captures d'écran */
-}
-
-        .card-preuve {
-            display: flex;
-            flex-direction: column;
-            height: 100%; /* Aligne la hauteur des cadres gris/blancs */
-}
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">Seynabou Naby NDAW</a>
+            <a class="navbar-brand" href="index.php">Seynabou Naby NDAW</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
@@ -186,155 +137,195 @@
             <li class="nav-item"><button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#prog">PROGRAMMER</button></li>
         </ul>
 
-        <div class="tab-content">
+        <div class="tab-content" id="pills-tabContent">
             
-<div id="ac11a" class="content-box">
-    <div id="ac11p" class="content-box">
+            <div class="tab-pane fade show active" id="admin" role="tabpanel">
+                <div class="global-card">
+                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Administrer les systèmes informatiques</h4>
+                    <p>Mise en place et maintenance des infrastructures systèmes, gestion des services réseaux et des environnements virtualisés.</p>
+                    <button class="btn btn-violet" onclick="toggleSection('global-admin-proof')">Voir Preuve Globale</button>
+                    <div id="global-admin-proof" class="content-box">
+                        <strong>Synthèse :</strong> Maîtrise de l'administration Windows Server (AD, DNS, IIS) et des technologies de conteneurisation Docker.
+                    </div>
+                </div>
+
+                <div class="accordion" id="accAdmin">
+                    <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac11">
+                                AC11.04 : Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation
+                            </button>
+                        </h2>
+                        <div id="ac11" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
+                            <div class="accordion-body">
+                                <button class="action-btn" onclick="toggleSection('ac11p')">📂 Document de preuve</button>
+<div id="ac11p" class="content-box">
+    <h5 class="fw-bold mb-4" style="color: #6b21a8;">Dossier de Preuves Techniques - SAE 2.01</h5>
+    
     <div class="row g-4">
         <div class="col-md-6">
             <div class="p-3 border rounded bg-white shadow-sm h-100">
-                <h5 class="fw-bold mb-3" style="color: #6b21a8;">Topologie du Réseau Inter-sites</h5>
-                <img src="images/topologie-sae21.png" alt="Topologie Packet Tracer" class="img-fluid rounded mb-2">
-                <p class="small text-muted italic">Simulation de l'interconnexion des 4 sites (Carnot, Métare, Roanne, Tréfilerie) sous Packet Tracer.</p>
+                <h6 class="fw-bold mb-2">1. Topologie du Réseau Inter-sites</h6>
+                <img src="images/topologie-sae21.png" alt="Topologie Réseau" class="img-fluid rounded mb-2 shadow-sm">
+                <p class="small text-muted italic">Architecture globale reliant les 4 sites sous Packet Tracer.</p>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="p-3 border rounded bg-white shadow-sm h-100">
-                <h5 class="fw-bold mb-3" style="color: #6b21a8;">Configuration du Routage RIP</h5>
-                <img src="images/config-rip.png" alt="Configuration Routeur" class="img-fluid rounded mb-2">
-                <p class="small text-muted italic">Extrait de la configuration du routeur principal pour le routage dynamique entre les bâtiments.</p>
+                <h6 class="fw-bold mb-2">2. Plan d'Adressage IP</h6>
+                <img src="images/plan-adressage.png" alt="Plan d'adressage" class="img-fluid rounded mb-2 shadow-sm">
+                <p class="small text-muted italic">Structuration des sous-réseaux et masques pour chaque bâtiment.</p>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="p-3 border rounded bg-white shadow-sm h-100">
-                <h5 class="fw-bold mb-3" style="color: #6b21a8;">Branchements en TP</h5>
-                <img src="images/branchement-reel.jpg" alt="Photo matériel réel" class="img-fluid rounded mb-2">
-                <p class="small text-muted italic">Mise en place physique du brassage et des liaisons Gigabit sur les switchs de l'IUT.</p>
+                <h6 class="fw-bold mb-2">3. Configuration du Routage Inter-sites</h6>
+                <img src="images/config-rip.png" alt="Configuration Routage" class="img-fluid rounded mb-2 shadow-sm">
+                <p class="small text-muted italic">Mise en œuvre du protocole RIP sur les routeurs principaux.</p>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="p-3 border rounded bg-white shadow-sm h-100">
-                <h5 class="fw-bold mb-3" style="color: #6b21a8;">Test de Connectivité (Ping)</h5>
-                <img src="images/preuve-ping.png" alt="Test Ping réussi" class="img-fluid rounded mb-2">
-                <p class="small text-muted italic">Validation de la communication inter-VLAN entre le PC Enseignant et le PC Administration.</p>
+                <h6 class="fw-bold mb-2">4. Tests de Connectivité (Pings)</h6>
+                <img src="images/preuve-ping.png" alt="Tests de connectivité" class="img-fluid rounded mb-2 shadow-sm">
+                <p class="small text-muted italic">Validation de la communication de bout en bout entre les services.</p>
             </div>
         </div>
     </div>
-</div>
-    <div class="document-paper" style="background-color: white; color: #333; padding: 40px; border-radius: 2px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); font-family: 'Times New Roman', serif; line-height: 1.6; border: 1px solid #e0e0e0;">
-        
-        <h2 style="text-align: center; margin-bottom: 20px; color: #6b21a8;">Analyse Réflexive : SAE 2.01</h2>
-        
-        <h3 style="border-bottom: 2px solid #6b21a8; padding-bottom: 10px; color: #6b21a8;">1. Contexte et Objectifs</h3>
-        <p>Dans le cadre de cette SAE, j'ai conçu l'infrastructure réseau d'une école multi-sites. Ce projet a mobilisé mes compétences en administration système et réseau dans un scénario professionnel réel.</p>
+</div>                                
 
-        <h3 style="border-bottom: 2px solid #6b21a8; padding-bottom: 10px; color: #6b21a8;">2. Analyse Méthodologique</h3>
-        <p><strong>Planification :</strong> J'ai structuré un plan d'adressage IP optimisé avant toute configuration technique pour garantir la fluidité des futurs échanges inter-sites.</p>
-        <p><strong>Configuration :</strong> La mise en œuvre des VLAN et du routage dynamique RIP a permis d'assurer la communication et la sécurité entre les services administratifs et pédagogiques.</p>
-
-        <h3 style="border-bottom: 2px solid #6b21a8; padding-bottom: 10px; color: #6b21a8;">3. Difficultés et Solutions</h3>
-        <p>Le défi majeur a été l'interconnexion via RIP. L'utilisation de Packet Tracer en phase amont m'a permis d'identifier et de corriger les erreurs de routage avant le déploiement virtuel final.</p>
-
-        <h3 style="border-bottom: 2px solid #6b21a8; padding-bottom: 10px; color: #6b21a8;">4. Bilan des Compétences</h3>
-        <p>Ce projet a validé ma capacité à concevoir un réseau de bout en bout et à documenter rigoureusement une installation technique pour en assurer la maintenance.</p>
-        
-    </div>
-</div>
-                <div class="accordion" id="accAdmin">
-                    <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac11">AC11.04 : Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et l’administration des réseaux et services fournis</button></h2>
-                        <div id="ac11" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
-                            <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac11p')">📂 Voir Preuve (Windows Server)</button>
-                                <div id="ac11p" class="content-box">Installation Active Directory et configuration DNS/IIS.</div>
-                                <button class="action-btn" onclick="toggleSection('ac11a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac11a" class="content-box">Réflexion sur la centralisation de la gestion des utilisateurs.</div>
+                                <button class="action-btn" onclick="toggleSection('ac11a')">💡 Voir SAE2.01</button>
+                                <div id="ac11a" class="content-box">
+                                    <div class="document-paper">
+                                        <h2 class="text-center">Analyse Réflexive : SAE2.01</h2>
+                                        <h3>1. Contexte et Objectifs</h3>
+                                        <p>Dans le cadre de cette SAE, l'objectif était de concevoir et configurer l'infrastructure réseau d'une école multi-sites (Carnot, Métare, Roanne, Tréfilerie). Ce projet m'a permis de mobiliser des compétences en administration système et réseau dans un scénario proche du monde professionnel.</p>
+                                        <h3>2. Analyse Technique et Méthodologique</h3>
+                                        <p><strong>Planification et Adressage:</strong> La première étape a consisté à structurer un plan d'adressage IP en divisant le réseau en sous-réseaux par site. Cette phase de réflexion théorique était cruciale avant toute manipulation technique pour garantir l'optimisation des ressources.</p>
+                                        <p><strong>Mise en œuvre des VLAN et Routage:</strong> J'ai configuré les switchs pour isoler les flux via des VLAN et mis en place le routage inter-VLAN sur le routeur. La réussite des tests de "Ping" entre différents services (ex: pc enseignant vers pc admin) a validé la justesse de ma configuration.</p>
+                                        <p><strong>Interconnexion et Sécurité:</strong> L'utilisation du protocole RIP pour le routage dynamique inter-sites et la mise en œuvre de NAT et d'ACL ont permis d'assurer à la fois la communication globale et la sécurité du réseau.</p>
+                                        <h3>3. Difficultés et Solutions</h3>
+                                        <p><strong>Complexité du routage:</strong>L'interconnexion de quatre sites distincts représentait un défi en termes de routage dynamique. En utilisant Packet Tracer pour simuler l'environnement, j'ai pu identifier les erreurs de configuration avant le déploiement virtuel final.</p>
+                                        <p><strong>Gestion des boucles:</strong> L'implémentation du Spanning Tree Protocol (STP) a été nécessaire pour éviter les boucles réseau dues aux liens de redondance Gigabit, garantissant ainsi la continuité de service.</p>
+                                        <h3>4. Bilan</h3>
+                                        <p>Ce projet a été déterminant pour ma compréhension des infrastructures réseaux complexes.</p> 
+                                        J'ai appris à :
+                                        <p>Concevoir un réseau de bout en bout, de l'adressage à la sécurisation par ACL.</p>
+                                        <p>Travailler en collaboration (notamment lors de l'interconnexion avec les réseaux d'autres binômes via RIP).</p>
+                                        <p>Documenter une installation technique de manière rigoureuse pour en faciliter la maintenance future.</p>
+</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac12">AC11.05 : Savoir identifier les dysfonctionnements du réseau local</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac12">
+                                AC11.05 : Savoir identifier les dysfonctionnements du réseau local
+                            </button>
+                        </h2>
                         <div id="ac12" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
                             <div class="accordion-body">
                                 <button class="action-btn" onclick="toggleSection('ac12p')">📂 Voir Preuve (Docker)</button>
-                                <div id="ac12p" class="content-box">Déploiement de conteneurs Nginx et gestion de volumes.</div>
+                                <div id="ac12p" class="content-box">Déploiement de conteneurs Nginx et gestion des volumes.</div>
                                 <button class="action-btn" onclick="toggleSection('ac12a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac12a" class="content-box">Avantages de l'isolation des services via la conteneurisation.</div>
+                                <div id="ac12a" class="content-box">Étude sur l'isolation des services pour faciliter la maintenance technique.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="connect">
+            <div class="tab-pane fade" id="connect" role="tabpanel">
                 <div class="global-card">
                     <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Connecter les entreprises et les usagers</h4>
-                    <p>Maîtrise des protocoles de communication et configuration des équipements d'interconnexion pour assurer le transport des données.</p>
+                    <p>Maîtrise des protocoles de communication et configuration des équipements d'interconnexion (VLAN, NAT, Routage).</p>
                     <button class="btn btn-violet" onclick="toggleSection('global-connect-proof')">Voir Preuve Globale</button>
                     <div id="global-connect-proof" class="content-box">
-                        <strong>Synthèse :</strong> Dossier technique d'une infrastructure réseau complète.
+                        <strong>Synthèse :</strong> Dossier technique complet d'interconnexion de sites distants avec tests de connectivité validés.
                     </div>
                 </div>
 
                 <div class="accordion" id="accConnect">
                     <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac21">AC 2.1 : Configurer les équipements réseaux</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac21">
+                                AC 2.1 : Configurer les équipements réseaux
+                            </button>
+                        </h2>
                         <div id="ac21" class="accordion-collapse collapse" data-bs-parent="#accConnect">
                             <div class="accordion-body">
                                 <button class="action-btn" onclick="toggleSection('ac21p')">📂 Voir Preuve (Cisco)</button>
-                                <div id="ac21p" class="content-box">Configuration VLAN, routage inter-VLAN et NAT sous Packet Tracer.</div>
+                                <div id="ac21p" class="content-box">
+                                    <p>Configuration VLAN, routage inter-VLAN et NAT sous Packet Tracer.</p>
+                                    <img src="images/preuve-vlan.jpg" alt="VLAN" class="img-fluid rounded shadow-sm">
+                                </div>
                                 <button class="action-btn" onclick="toggleSection('ac21a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac21a" class="content-box">Étude sur la segmentation pour la performance réseau.</div>
+                                <div id="ac21a" class="content-box">Analyse de la segmentation pour optimiser le flux de données.</div>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac22">AC 2.2 : Déployer des liens de télécommunications</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac22">
+                                AC 2.2 : Déployer des liens de télécommunications
+                            </button>
+                        </h2>
                         <div id="ac22" class="accordion-collapse collapse" data-bs-parent="#accConnect">
                             <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac22p')">📂 Voir Preuve (Transmission)</button>
-                                <div id="ac22p" class="content-box">Étude du multiplexage optique et mesures sur fibre.</div>
+                                <button class="action-btn" onclick="toggleSection('ac22p')">📂 Voir Preuve (Fibre)</button>
+                                <div id="ac22p" class="content-box">Mesures de réflectométrie sur liens optiques.</div>
                                 <button class="action-btn" onclick="toggleSection('ac22a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac22a" class="content-box">Analyse des supports de transmission haut débit.</div>
+                                <div id="ac22a" class="content-box">Étude des supports de transmission haut débit.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="prog">
+            <div class="tab-pane fade" id="prog" role="tabpanel">
                 <div class="global-card">
-                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Programmer des outils et des applications informatiques pour les Réseaux et Télécommunications</h4>
-                    <p>Développement de solutions logicielles et scripts d'automatisation pour optimiser les tâches d'ingénierie réseau.</p>
+                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Programmer des outils et applications</h4>
+                    <p>Développement de solutions logicielles et scripts d'automatisation (Python, HTML/CSS, Symfony).</p>
                     <button class="btn btn-violet" onclick="toggleSection('global-prog-proof')">Voir Preuve Globale</button>
                     <div id="global-prog-proof" class="content-box">
-                        <strong>Synthèse :</strong> Portfolio de projets de développement (Python, Web).
+                        <strong>Synthèse :</strong> Projets incluant le développement de ce portfolio et des scripts d'ingénierie réseau.
                     </div>
                 </div>
 
                 <div class="accordion" id="accProg">
                     <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac31">AC 3.1 : Développer des outils informatiques</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac31">
+                                AC 3.1 : Développer des outils informatiques
+                            </button>
+                        </h2>
                         <div id="ac31" class="accordion-collapse collapse" data-bs-parent="#accProg">
                             <div class="accordion-body">
                                 <button class="action-btn" onclick="toggleSection('ac31p')">📂 Voir Preuve (Python)</button>
-                                <div id="ac31p" class="content-box">Scripts d'automatisation pour le calcul d'adresses IP.</div>
+                                <div id="ac31p" class="content-box">Scripts de calcul de distances GPS et gestion de suites mathématiques.</div>
                                 <button class="action-btn" onclick="toggleSection('ac31a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac31a" class="content-box">Comment le code simplifie l'administration quotidienne.</div>
+                                <div id="ac31a" class="content-box">Apport de la programmation pour l'automatisation des tâches techniques.</div>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac32">AC 3.2 : Concevoir des applications Web</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac32">
+                                AC 3.2 : Concevoir des applications Web
+                            </button>
+                        </h2>
                         <div id="ac32" class="accordion-collapse collapse" data-bs-parent="#accProg">
                             <div class="accordion-body">
                                 <button class="action-btn" onclick="toggleSection('ac32p')">📂 Voir Preuve (Web)</button>
-                                <div id="ac32p" class="content-box">Conception de ce portfolio en responsive design.</div>
+                                <div id="ac32p" class="content-box">Création de l'interface responsive de ce portfolio.</div>
                                 <button class="action-btn" onclick="toggleSection('ac32a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac32a" class="content-box">Importance de l'ergonomie (UX/UI) pour l'utilisateur.</div>
+                                <div id="ac32a" class="content-box">Réflexion sur l'UX/UI pour les outils d'administration.</div>
                             </div>
                         </div>
                     </div>
@@ -343,15 +334,7 @@
 
         </div>
     </div>
-    <div id="ac113p" class="content-box">
-    <p><strong>Configuration VLAN et Routage :</strong> Voici la topologie réseau mise en place sous Packet Tracer.</p>
-    <img src="images/preuve-vlan.jpg" alt="Capture d'écran configuration VLAN" class="img-fluid rounded shadow-sm">
-</div>
 
-<div id="ac114p" class="content-box">
-    <p><strong>Administration Active Directory :</strong> Interface de gestion des utilisateurs sur Windows Server 2022.</p>
-    <img src="images/preuve-windows-server.png" alt="Capture d'écran Active Directory" class="img-fluid rounded shadow-sm">
-</div>
     <script>
         function toggleSection(id) {
             const section = document.getElementById(id);
