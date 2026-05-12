@@ -257,10 +257,44 @@
         <div class="accordion-body">
             
             <button class="action-btn" onclick="toggleSection('ac1103p')">📂 Voir Preuve (Configuration)</button>
-            <div id="ac1103p" class="content-box">
-                <p><strong>Configuration d'interface :</strong> Attribution d'IP et activation des ports sous Cisco IOS.</p>
-                <img src="images/votre-image-config.png" alt="Preuve" class="img-fluid rounded">
-            </div>
+
+<div id="ac1103p" class="evidence-section mt-4" style="display: none;">
+    <h4 class="fw-bold text-decoration-underline">Documents de preuve</h4>
+
+    <style>
+        .img-preuve {
+            max-width: 600px; /* Ajuste cette valeur (ex: 400px) pour réduire encore */
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+
+    <div class="mb-4">
+        <h5>1. Topologie Réseau</h5>
+        <p class="small text-muted">Schéma global de l'infrastructure réalisé sous Packet Tracer.</p>
+        <img src="images/topologie.png" class="img-preuve rounded shadow-sm" alt="Topologie Réseau">
+    </div>
+
+    <div class="mb-4">
+        <h5>2. Plan d'adressage</h5>
+        <p class="small text-muted">Tableau récapitulatif des sous-réseaux, masques et passerelles.</p>
+        <img src="images/plan_adress.png" class="img-preuve rounded shadow-sm" alt="Plan d'adressage">
+    </div>
+
+    <div class="mb-4">
+        <h5>3. Configuration matériel (Physique)</h5>
+        <p class="small text-muted">Extrait du paramétrage de la machine physique réalisé lors du TP.</p>
+        <img src="images/config-machine.png" class="img-preuve rounded shadow-sm" alt="Configuration matériel physique">
+    </div>
+
+    <div class="mb-4">
+        <h5>4. Configuration matériel (Packet Tracer)</h5>
+        <p class="small text-muted">Capture des commandes CLI ou des paramètres de configuration dans le simulateur.</p>
+        <img src="images/config-pt.png" class="img-preuve rounded shadow-sm" alt="Configuration Packet Tracer">
+    </div>
+</div>
 
             <button class="action-btn" onclick="toggleSection('ac1103a')">💡 Voir SAE1.02</button>
             <div id="ac1103a" class="content-box">
@@ -335,10 +369,45 @@
             </h2>
             <div id="ac1201" class="accordion-collapse collapse" data-bs-parent="#accConnect">
                 <div class="accordion-body">
-                    <button class="action-btn" onclick="toggleSection('ac1201p_c')">📂 Voir Preuve</button>
-                    <div id="ac1201p_c" class="content-box">
-                        <p>Analyse de signaux à l'oscilloscope et mesures de fréquences en travaux pratiques.</p>
-                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac-connect-1')">📂 Voir Preuves (Transmission du Signal)</button>
+
+<div id="ac-connect-1" class="evidence-section mt-4" style="display: none;">
+    <h4 class="fw-bold text-decoration-underline">Documents de preuve</h4>
+
+    <style>
+        .img-preuve-connect {
+            max-width: 500px; /* Taille optimisée pour que ce ne soit pas trop grand */
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+
+    <div class="mb-4">
+        <h5>1. Branchement Plaque CAN/CNA</h5>
+        <p class="small text-muted">Mise en place du câblage pour la conversion Analogique-Numérique et Numérique-Analogique.</p>
+        <img src="images/branchement_can_cna.png" class="img-preuve-connect rounded shadow-sm" alt="Branchement CAN/CNA">
+    </div>
+
+    <div class="mb-4">
+        <h5>2. Branchement Multiplexeur/Démultiplexeur</h5>
+        <p class="small text-muted">Configuration des liaisons pour le multiplexage temporel ou fréquentiel des signaux.</p>
+        <img src="images/branchement_mux_demux.png" class="img-preuve-connect rounded shadow-sm" alt="Branchement MUX/DEMUX">
+    </div>
+
+    <div class="mb-4">
+        <h5>3. Visualisation Signal CAN/CNA</h5>
+        <p class="small text-muted">Capture d'écran de l'oscilloscope montrant la reconstitution du signal après conversion.</p>
+        <img src="images/visu_signal_can.png" class="img-preuve-connect rounded shadow-sm" alt="Visualisation Signal CAN">
+    </div>
+
+    <div class="mb-4">
+        <h5>4. Visualisation Signal Multiplexé</h5>
+        <p class="small text-muted">Observation du signal combiné sur le bus de transmission.</p>
+        <img src="images/visu_signal_mux.png" class="img-preuve-connect rounded shadow-sm" alt="Visualisation Signal Multiplexé">
+    </div>
+</div>
                     <button class="action-btn" onclick="toggleSection('ac1201a_final')">💡 Voir R2.06</button>
         <div id="ac1201a_final" class="content-box">
             <div class="document-paper">
@@ -376,10 +445,32 @@
             </h2>
             <div id="ac1202" class="accordion-collapse collapse" data-bs-parent="#accConnect">
                 <div class="accordion-body">
-                    <button class="action-btn" onclick="toggleSection('ac1202p_c')">📂 Voir Preuve</button>
-                    <div id="ac1202p_c" class="content-box">
-                        <p>Modélisation mathématique des systèmes de transmission et étude des supports physiques.</p>
-                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac-connect-2')">📂 Voir Preuves (Travail d'Équipe)</button>
+
+<div id="ac-connect-2" class="evidence-section mt-4" style="display: none;">
+    <h4 class="fw-bold text-decoration-underline">Documents de preuve</h4>
+
+    <style>
+        .img-equipe {
+            max-width: 500px; /* Taille adaptée pour les photos de groupe */
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+
+    <div class="mb-4">
+        <h5>1. Organisation du Marché Solidaire</h5>
+        <p class="small text-muted">Réunion d'équipe</p>
+        <img src="images/equipe_1.png" class="img-equipe rounded shadow-sm" alt="Photo d'équipe 1">
+    </div>
+
+    <div class="mb-4">
+        <h5>2. Equipe Compléte</h5>
+        <img src="images/equipe_2.png" class="img-equipe rounded shadow-sm" alt="Photo d'équipe 2">
+    </div>
+</div>
                     <button class="action-btn" onclick="toggleSection('ac1202a_c')">💡 Voir Vie Associative</button>
                     <div id="ac1202a_c" class="content-box">
                         <div class="document-paper">
@@ -402,7 +493,13 @@
 		    <p><strong>Rigueur :</strong>J'ai compris que pour éviter les erreurs, il faut donner des consignes très claires.</p>
 		    <p><strong>Écoute :</strong>Je sais mieux comprendre ce que mon interlocuteur attend pour lui donner la bonne réponse.</p>
 		    <p><strong>Esprit d'équipe :</strong> J'ai appris à créer une bonne ambiance de travail et à faire en sorte que tout le monde avance vers le même but. C'est essentiel pour réussir un projet, que ce soit dans une association ou dans un groupe de TP.</p>
-                    </div> </div> </div> </div> </div> </div> </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</div> 
+</div> 
                     <div class="tab-pane fade" id="prog" role="tabpanel">
     <div class="global-card">
         <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Programmer</h4>
@@ -444,10 +541,40 @@
             </h2>
             <div id="ac0314" class="accordion-collapse collapse" data-bs-parent="#accProgram">
                 <div class="accordion-body">
-                    <button class="action-btn" onclick="toggleSection('ac0314p')">📂 Voir Preuve</button>
-                    <div id="ac0314p" class="content-box">
-                        <p><strong>Script d'analyse :</strong> Conception d'un programme automatisé pour traiter des fichiers de capture et générer un rapport de diagnostic réseau.</p>
-                    </div>
+                <button class="action-btn" onclick="toggleSection('ac-portfolio-self')">📂 Voir Preuves (Développement du Portfolio)</button>
+
+<div id="ac-portfolio-self" class="evidence-section mt-4" style="display: none;">
+    <h4 class="fw-bold text-decoration-underline">Documents de preuve</h4>
+
+    <style>
+        .img-portfolio {
+            max-width: 550px; 
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+
+    <div class="mb-4">
+        <h5>1. Structure HTML </h5>
+        <p class="small text-muted">Capture du code de la page "Paasions".</p>
+        <img src="images/code_html_portfolio.png" class="img-portfolio rounded shadow-sm" alt="Code HTML Portfolio">
+    </div>
+
+    <div class="mb-4">
+        <h5>2. Design et Personnalisation CSS</h5>
+        <p class="small text-muted">Extrait du code CSS partie style de la page Portfolio.</p>
+        <img src="images/code_css_portfolio.png" class="img-portfolio rounded shadow-sm" alt="Code CSS Portfolio">
+    </div>
+
+
+    <div class="mb-4">
+        <h5>4. Rendu final </h5>
+        <p class="small text-muted">Capture de l'accueil du site sur navigateur.</p>
+        <img src="images/rendu_final_portfolio.png" class="img-portfolio rounded shadow-sm" alt="Rendu Final Portfolio">
+    </div>
+</div>
                     <button class="action-btn" onclick="toggleSection('ac0314a')">💡 Voir Projet Site</button>
                     <div id="ac0314a" class="content-box">
                         <div class="document-paper">
@@ -482,10 +609,39 @@
             </h2>
             <div id="ac0315" class="accordion-collapse collapse" data-bs-parent="#accProgram">
                 <div class="accordion-body">
-                    <button class="action-btn" onclick="toggleSection('ac0315p')">📂 Voir Preuve</button>
-                    <div id="ac0315p" class="content-box">
-                        <p><strong>Gestion des données :</strong> Utilisation de structures de données pour calculer des statistiques (Top 10 destinations, taux de broadcast de 36.4%).</p>
-                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac-prog-1')">📂 Voir Preuves (Développement Python/Web)</button>
+
+<div id="ac-prog-1" class="evidence-section mt-4" style="display: none;">
+    <h4 class="fw-bold text-decoration-underline">Documents de preuve</h4>
+
+    <style>
+        .img-preuve-prog {
+            max-width: 550px; /* Taille optimale pour voir les lignes de code */
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+
+    <div class="mb-4">
+        <h5>1. Script de traitement de données</h5>
+        <p class="small text-muted">Capture du code source Python montrant la logique de tri et les algorithmes utilisés.</p>
+        <img src="images/code_python.png" class="img-preuve-prog rounded shadow-sm" alt="Code Source Python">
+    </div>
+
+    <div class="mb-4">
+        <h5>2. Résultat de l'exécution</h5>
+        <p class="small text-muted">Affichage des résultats dans la console ou interface générée par le programme.</p>
+        <img src="images/resultat_prog.png" class="img-preuve-prog rounded shadow-sm" alt="Résultat Programme">
+    </div>
+
+    <div class="mb-4">
+        <h5>3. Visualisation des données traitées</h5>
+        <p class="small text-muted">Exemple de fichier de sortie ou de graphique généré automatiquement par le script.</p>
+        <img src="images/visu_donnees.png" class="img-preuve-prog rounded shadow-sm" alt="Visualisation des données">
+    </div>
+</div>
                     <button class="action-btn" onclick="toggleSection('ac0315a')">💡 Voir SAE1.05</button>
                     <div id="ac0315a" class="content-box">
                         <div class="document-paper">
