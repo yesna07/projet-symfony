@@ -143,9 +143,33 @@
                 <div class="global-card">
                     <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Administrer les systèmes informatiques</h4>
                     <p>Mise en place et maintenance des infrastructures systèmes, gestion des services réseaux et des environnements virtualisés.</p>
-                    <button class="btn btn-violet" onclick="toggleSection('global-admin-proof')">Voir Preuve Globale</button>
+                    <button class="btn btn-violet" onclick="toggleSection('global-admin-proof')">Voir Analyse Globale</button>
                     <div id="global-admin-proof" class="content-box">
-                        <strong>Synthèse :</strong> Maîtrise de l'administration Windows Server (AD, DNS, IIS) et des technologies de conteneurisation Docker.
+                        <div class="document-paper">
+                                        <h2 class="text-center">Analyse Globale : Compétence "Administrer"</h2>
+                    
+                    <h3>1. Description (Ce qui s'est passé)</h3>
+                    <p>Dans le cadre de ma formation, j'ai administré des infrastructures réseaux de différentes tailles de par différents projets, allant d'un simple réseau local (SAE 1.02) à une structure multi-sites complexe pour une école (SAE 2.01). Mon travail a consisté à initialiser des équipements (switchs, routeurs), à mettre en place des services essentiels comme le DHCP pour l'automatisation des adresses et le DNS pour la résolution de noms, ainsi qu'à gérer la sécurité via des ACL et du NAT.</p>
+
+                    <h3>2. Sentiments (Ce que j'ai ressenti)</h3>
+                    <p>Au départ, la complexité du routage dynamique et la peur de créer des boucles réseau étaient sources d'appréhension. Cependant, passer de la théorie à la pratique et voir des sites distants (comme Roanne et Carnot) communiquer grâce à mes configurations a été très gratifiant. J'ai ressenti une réelle montée en confiance en voyant que mes choix techniques (comme le plan d'adressage) fonctionnaient concrètement.</p>
+
+                    <h3>3. Évaluation (Le bon et le moins bon)</h3>
+                    <p><strong>Le positif :</strong> J'ai acquis une grande rigueur dans l'administration. L'utilisation de commandes de vérification comme show running-config et la validation par des tests de "Ping" m'ont permis de garantir un service fonctionnel. La mise en place du protocole STP pour éviter les boucles a également été une réussite technique majeure.</p>
+                    <p><strong>Le négatif :</strong> La gestion des erreurs de syntaxe sous Cisco IOS m'a pris beaucoup de temps au début. J'ai aussi réalisé que sans une documentation rigoureuse dès le départ, il est difficile de maintenir un réseau complexe quand on travaille à plusieurs (Interconnexion avec les binômes lors du TP).</p>
+
+                    <h3>4. Analyse (Comprendre la situation)</h3>
+		    <p>Administrer un réseau, ce n'est pas seulement brancher des câbles, c'est anticiper les besoins. En divisant le réseau en sous-réseaux et en isolant les flux via des VLAN, j'ai compris que l'administration sert avant tout à optimiser et sécuriser les ressources. L'interconnexion avec d'autres binômes via le protocole RIP m'a montré que l'administration nécessite aussi une dimension collaborative : il faut que les systèmes soient compatibles pour communiquer.</p>
+                    <h3>5. Conclusion (Ce que j'aurais pu faire d'autre)</h3>
+		    <p>J'aurais pu passer plus de temps sur la phase de diagnostic préventif. Bien que j'aie appris à isoler les pannes via le modèle OSI, une meilleure préparation théorique sur les protocoles de routage dynamique m'aurait permis d'éviter certaines erreurs de configuration lors du déploiement final sur Packet Tracer.</p>
+		    
+		    <h3>6. Plan d'action</h3>
+		    <p>Pour mes futurs projets d'administration :</p>
+		    <p><strong>1. Systématiser la documentation :</strong>Je vais m'obliger à rédiger un journal de bord technique pour faciliter la maintenance et le travail en équipe.</p>
+		    <p><strong>2. Approfondir la cybersécurité :</strong>Je souhaite perfectionner la mise en œuvre des listes de contrôle d'accès (ACL) pour affiner la sécurité des services administrés.</p>
+		    <p><strong>3. Utiliser la simulation comme validation :</strong>Je continuerai à valider systématiquement mes maquettes sur simulateur avant toute application sur des équipements réels pour minimiser les interruptions de service.</p>
+</p>
+                                    </div>
                     </div>
                 </div>
 
@@ -223,118 +247,275 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac12">
-                                AC11.05 : Savoir identifier les dysfonctionnements du réseau local
-                            </button>
-                        </h2>
-                        <div id="ac12" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
-                            <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac12p')">📂 Voir Preuve (Docker)</button>
-                                <div id="ac12p" class="content-box">Déploiement de conteneurs Nginx et gestion des volumes.</div>
-                                <button class="action-btn" onclick="toggleSection('ac12a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac12a" class="content-box">Étude sur l'isolation des services pour faciliter la maintenance technique.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="accordion-item shadow-sm">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac1103">
+            AC11.03 : Configurer les fonctions de base du réseau local
+        </button>
+    </h2>
+    <div id="ac1103" class="accordion-collapse collapse" data-bs-parent="#accAdmin">
+        <div class="accordion-body">
+            
+            <button class="action-btn" onclick="toggleSection('ac1103p')">📂 Voir Preuve (Configuration)</button>
+            <div id="ac1103p" class="content-box">
+                <p><strong>Configuration d'interface :</strong> Attribution d'IP et activation des ports sous Cisco IOS.</p>
+                <img src="images/votre-image-config.png" alt="Preuve" class="img-fluid rounded">
             </div>
 
-            <div class="tab-pane fade" id="connect" role="tabpanel">
-                <div class="global-card">
-                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Connecter les entreprises et les usagers</h4>
-                    <p>Maîtrise des protocoles de communication et configuration des équipements d'interconnexion (VLAN, NAT, Routage).</p>
-                    <button class="btn btn-violet" onclick="toggleSection('global-connect-proof')">Voir Preuve Globale</button>
-                    <div id="global-connect-proof" class="content-box">
-                        <strong>Synthèse :</strong> Dossier technique complet d'interconnexion de sites distants avec tests de connectivité validés.
-                    </div>
-                </div>
+            <button class="action-btn" onclick="toggleSection('ac1103a')">💡 Voir SAE1.02</button>
+            <div id="ac1103a" class="content-box">
+                <div class="document-paper">
+                    <h2 class="text-center">Analyse Réflexive : SAE 1.02</h2>
+                    
+                    <h3>1. Contexte et Objectifs du Projet</h3>
+                    <p>Ce projet, réalisé dans le cadre de la SAE 1.02 "Se présenter sur le réseau", avait pour but de mettre en place une première infrastructure réseau fonctionnelle. L'objectif principal était de maîtriser les configurations de base nécessaires pour permettre à plusieurs équipements de communiquer au sein d'un même réseau local.</p>
 
-                <div class="accordion" id="accConnect">
-                    <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac21">
-                                AC 2.1 : Configurer les équipements réseaux
-                            </button>
-                        </h2>
-                        <div id="ac21" class="accordion-collapse collapse" data-bs-parent="#accConnect">
-                            <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac21p')">📂 Voir Preuve (Cisco)</button>
-                                <div id="ac21p" class="content-box">
-                                    <p>Configuration VLAN, routage inter-VLAN et NAT sous Packet Tracer.</p>
-                                    <img src="images/preuve-vlan.jpg" alt="VLAN" class="img-fluid rounded shadow-sm">
-                                </div>
-                                <button class="action-btn" onclick="toggleSection('ac21a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac21a" class="content-box">Analyse de la segmentation pour optimiser le flux de données.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac22">
-                                AC 2.2 : Déployer des liens de télécommunications
-                            </button>
-                        </h2>
-                        <div id="ac22" class="accordion-collapse collapse" data-bs-parent="#accConnect">
-                            <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac22p')">📂 Voir Preuve (Fibre)</button>
-                                <div id="ac22p" class="content-box">Mesures de réflectométrie sur liens optiques.</div>
-                                <button class="action-btn" onclick="toggleSection('ac22a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac22a" class="content-box">Étude des supports de transmission haut débit.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <h3>2. Analyse technique et méthodologique</h3>
+                    <p><strong>Configuration des équipements :</strong> J'ai procédé à l'initialisation et à la configuration des interfaces sur des switchs et des routeurs. Cela incluait l'attribution d'adresses IP statiques et l'activation des ports via la console.</p>
+                    <p><strong>Mise en place des services :</strong> Pour automatiser la gestion du réseau, j'ai configuré un serveur DHCP pour la distribution des adresses et un service DNS pour la résolution de noms, facilitant ainsi l'accès aux ressources.</p>
+                    <p><strong>Tests de validation :</strong> Chaque étape de configuration a été validée par des tests de connectivité (Ping), garantissant que la passerelle par défaut et les masques étaient correctement renseignés.</p>
 
-            <div class="tab-pane fade" id="prog" role="tabpanel">
-                <div class="global-card">
-                    <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Programmer des outils et applications</h4>
-                    <p>Développement de solutions logicielles et scripts d'automatisation (Python, HTML/CSS, Symfony).</p>
-                    <button class="btn btn-violet" onclick="toggleSection('global-prog-proof')">Voir Preuve Globale</button>
-                    <div id="global-prog-proof" class="content-box">
-                        <strong>Synthèse :</strong> Projets incluant le développement de ce portfolio et des scripts d'ingénierie réseau.
-                    </div>
-                </div>
+                    <h3>3. Difficultés rencontrées et Solutions</h3>
+                    <p><strong>Erreurs de syntaxe :</strong> L'apprentissage des commandes Cisco IOS a nécessité une grande rigueur. L'utilisation systématique de la commande <code>show running-config</code> m'a permis de vérifier mes saisies et de corriger rapidement les erreurs de frappe.</p>
+                    <p><strong>Diagnostic de panne :</strong> Lors de l'absence de réponse au ping, j'ai appris à isoler le problème en vérifiant chaque couche du modèle OSI, pour rapidement identifier et résoudre les soucis d'interconnexion.</p>
 
-                <div class="accordion" id="accProg">
-                    <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac31">
-                                AC 3.1 : Développer des outils informatiques
-                            </button>
-                        </h2>
-                        <div id="ac31" class="accordion-collapse collapse" data-bs-parent="#accProg">
-                            <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac31p')">📂 Voir Preuve (Python)</button>
-                                <div id="ac31p" class="content-box">Scripts de calcul de distances GPS et gestion de suites mathématiques.</div>
-                                <button class="action-btn" onclick="toggleSection('ac31a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac31a" class="content-box">Apport de la programmation pour l'automatisation des tâches techniques.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item shadow-sm">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac32">
-                                AC 3.2 : Concevoir des applications Web
-                            </button>
-                        </h2>
-                        <div id="ac32" class="accordion-collapse collapse" data-bs-parent="#accProg">
-                            <div class="accordion-body">
-                                <button class="action-btn" onclick="toggleSection('ac32p')">📂 Voir Preuve (Web)</button>
-                                <div id="ac32p" class="content-box">Création de l'interface responsive de ce portfolio.</div>
-                                <button class="action-btn" onclick="toggleSection('ac32a')">💡 Voir Analyse Réflexive</button>
-                                <div id="ac32a" class="content-box">Réflexion sur l'UX/UI pour les outils d'administration.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <h3>4. Bilan et Compétences acquises</h3>
+                    <ul>
+                        <li>Maîtrise des commandes de base pour l'administration d'équipements réseaux.</li>
+                        <li>Capacité à déployer et tester des services réseaux indispensables (DHCP, DNS).</li>
+                        <li>Rigueur dans l'application d'un plan d'adressage pour éviter les conflits d'adresses IP.</li>
+                    </ul>
+                    </div> 
+                    </div> 
+                </div> 
+        </div> 
+    </div> 
 
+
+                </div>    </div><div class="tab-pane fade" id="connect" role="tabpanel">
+    <div class="global-card">
+        <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Connecter les entreprises et les usagers</h4>
+        <p>Cette compétence porte sur la mesure, l'analyse des signaux et la caractérisation des systèmes de transmissions élémentaires.</p>
+        <button class="btn btn-violet" onclick="toggleSection('global-connect-proof')">Voir Analyse Globale</button>
+        <div id="global-connect-proof" class="content-box">
+            <div class="document-paper">
+                <h2 class="text-center">Analyse Globale : Compétence "Connecter"</h2>
+
+<h3>1. Description (Ce qui s'est passé)</h3>
+<p>Pour cette compétence, j'ai travaillé sur la mise en place de liaisons pour transmettre des informations. Techniquement, cela est passé par l'étude du multiplexage temporel (TP R2.06) afin d'apprendre à envoyer plusieurs signaux sur un seul canal. Sur le plan humain, mon rôle de présidente à Campus Solidaire m'oblige aussi à "connecter" les bénévoles, la direction et les partenaires pour que l'information circule sans erreur.</p>
+
+<h3>2. Sentiments (Ce que j'ai ressenti)</h3>
+<p>Sur le plan technique, j'ai trouvé très intéressant de voir comment deux signaux différents pouvaient se mélanger sur un oscilloscope pour n'en former qu'un, puis de réussir à les séparer. Dans mon association, j'ai parfois ressenti de l'appréhension lors des prises de parole devant un public, mais la réussite de nos actions solidaires m'a donné confiance dans ma capacité à créer des liens entre les gens.</p>
+
+<h3>3. Évaluation (Le bon et le moins bon)</h3>
+<p><strong>Le positif :</strong> Je maîtrise maintenant les bases de la transmission (critère de Shannon, échantillonnage). J'ai aussi appris à adapter mon langage selon mes interlocuteurs : être sérieuse avec les officiels et plus simple avec les bénévoles pour que le message passe mieux.</p>
+<p><strong>Le négatif :</strong> J'ai remarqué qu'un manque de synchronisation (que ce soit une horloge mal réglée en TP ou un manque de communication dans l'équipe) entraîne un échec total de la réception du message.</p>
+
+<h3>4. Analyse (Comprendre la situation)</h3>
+<p>La connexion repose sur la précision. En TP, si la fréquence est trop basse, l'information est perdue (repliement spectral). Dans mon association, c'est la même chose : si je ne donne pas des consignes claires, des tensions apparaissent et le message est "brouillé". Connecter, c'est donc s'assurer que l'émetteur et le récepteur sont parfaitement sur la même longueur d'onde.</p>
+
+<h3>5. Conclusion (Ce que j'aurais pu faire d'autre)</h3>
+<p>En TP, j'aurais pu tester davantage de réglages de filtres pour obtenir un signal encore plus propre en sortie. Dans mon rôle de présidente, j'ai réalisé que pour éviter les malentendus, je dois encore plus reformuler les propos de chacun pour être sûre que la connexion est bien établie entre tous les membres.</p>
+
+<h3>6. Plan d'action</h3>
+<p>Pour mes futurs projets :</p>
+<p><strong>1. Vérifier la synchronisation :</strong> Que ce soit pour un branchement de matériel ou une réunion d'équipe, je m'assurerai toujours que tout le monde a le même niveau d'information au départ.</p>
+<p><strong>2. Aller à l'essentiel :</strong> Comme pour le multiplexage, je vais apprendre à condenser les informations importantes pour ne pas saturer mes supports de communication (rapports ou réunions).</p>
+<p><strong>3. Nettoyer le message :</strong> Je vais appliquer la technique du "filtrage" à mes prises de parole pour éviter les informations inutiles qui risquent de perdre mon interlocuteur.</p>
+                    </div>
         </div>
     </div>
 
+    <div class="accordion" id="accConnect">
+        <div class="accordion-item shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac1201">
+                    AC 12.01 : Mesurer et analyser les signaux
+                </button>
+            </h2>
+            <div id="ac1201" class="accordion-collapse collapse" data-bs-parent="#accConnect">
+                <div class="accordion-body">
+                    <button class="action-btn" onclick="toggleSection('ac1201p_c')">📂 Voir Preuve</button>
+                    <div id="ac1201p_c" class="content-box">
+                        <p>Analyse de signaux à l'oscilloscope et mesures de fréquences en travaux pratiques.</p>
+                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac1201a_final')">💡 Voir R2.06</button>
+        <div id="ac1201a_final" class="content-box">
+            <div class="document-paper">
+                    <h2 class="text-center">Analyse Réflexive : R2.06</h2>
+                    
+                    <h3>1. Contexte et Objectifs du Projet</h3>
+                    <p>Dans le cadre de ce TP, l'objectif était d'étudier les principes du multiplexage et du démultiplexage temporel. Ce projet m'a permis de comprendre comment acheminer plusieurs informations sur un seul canal de communication, une compétence fondamentale en télécommunications pour optimiser l'utilisation des bandes passantes.</p>
+
+                    <h3>2. Analyse technique et méthodologique</h3>
+                    <p><strong>Échantillonnage et Respect de Shannon :</strong> La première étape a consisté à vérifier la validité du théorème de Nyquist-Shannon. Avec une fréquence maximale de $300\text{ Hz}$ , nous avons utilisé une fréquence d'horloge de $10\text{ kHz}$ pour garantir une restitution fidèle du signal d'origine.</p>
+                    <p><strong>Multiplexage des signaux :</strong> J'ai observé le mélange des signaux 1 et 2 sur l'oscilloscope. La superposition des signaux d'entrée avec le signal multiplexé a permis de valider visuellement que l'information de chaque voie était bien présente dans le flux combiné.</p>
+                    <p><strong>Démultiplexage et Filtrage :</strong> Pour séparer les signaux, j'ai mis en œuvre un filtre passe-bas. Cette étape était cruciale pour éliminer les fréquences parasites (bruit et harmoniques) générées par le découpage temporel et retrouver l'allure des signaux de départ.</p>
+
+                    <h3>3. Difficultés rencontrées et Solutions</h3>
+                    <p><strong>Non-respect du critère de Shannon :</strong> Lors du passage à une fréquence d'horloge de $500\text{ Hz}$, nous avons rencontré une impossibilité de restituer l'information. En analysant les résultats, j'ai identifié que cette fréquence était trop proche de $2 \cdot F_{max}$, provoquant un repliement spectral.</p>
+                    <p><strong>Synchronisation des horloges :</strong> Un défi majeur a été de comprendre l'importance de la synchronisation. L'absence ou le mauvais branchement des fréquences d'horloge en entrée du multiplexage et du démultiplexage entraînait un échec total de la réception.</p>
+
+                    <h3>4. Bilan et Compétences acquises</h3>
+		    <p> Ce TP a été déterminant pour ma compréhension du traitement du signal. J'ai appris à :</p>
+                    <ul>
+                        <li>Dimensionner un système d'échantillonnage en calculant les fréquences d'horloge nécessaires</li>
+                        <li>Maîtriser les outils de mesure (oscilloscope, multiplexeur) pour analyser des signaux complexes et identifier des harmoniques.</li>
+                        <li>Appliquer des solutions de filtrage pour nettoyer un signal après une opération de démultiplexage.</li>
+                    </ul>
+        </div>
+    </div>
+</div>
+        </div> </div>
+
+        <div class="accordion-item shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac1202">
+                    AC12.05 : Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur
+                </button>
+            </h2>
+            <div id="ac1202" class="accordion-collapse collapse" data-bs-parent="#accConnect">
+                <div class="accordion-body">
+                    <button class="action-btn" onclick="toggleSection('ac1202p_c')">📂 Voir Preuve</button>
+                    <div id="ac1202p_c" class="content-box">
+                        <p>Modélisation mathématique des systèmes de transmission et étude des supports physiques.</p>
+                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac1202a_c')">💡 Voir Vie Associative</button>
+                    <div id="ac1202a_c" class="content-box">
+                        <div class="document-paper">
+                    <h2 class="text-center">Analyse Réflexive : Association Bénévole</h2>
+                    
+                    <h3>1.Contexte et Responsabilités</h3>
+                    <p>En tant que présidente de l'association Campus Solidaire à l'IUT de Roann, mon rôle est de diriger l'association, de gérer les projets et de coordonner les bénévoles. Je représente aussi l'association lors de tous les rendez-vous importants avec les responsables de l'IUT ou les partenaires extérieurs. C’est un poste où il faut savoir beaucoup communiquer pour que les actions solidaires se passent bien.</p>
+
+                    <h3>2. Analyse de la posture</h3>
+                    <p><strong>Avec les officiels (Direction, mairies, banques) :</strong> J'utilise un langage sérieux et poli. Quand je demande une aide financière ou un local, je présente des arguments clairs sur le budget et l'utilité du projet pour montrer que nous sommes organisés.</p>
+                    <p><strong>Avec les étudiants et les bénévoles :</strong> Je parle de manière plus simple et motivante. J'explique les missions pour que tout le monde comprenne ce qu'il a à faire, sans utiliser de mots trop compliqués, pour que l'équipe reste soudée.</p>
+                    <p><strong>Démultiplexage et Filtrage :</strong> Pour séparer les signaux, j'ai mis en œuvre un filtre passe-bas. Cette étape était cruciale pour éliminer les fréquences parasites (bruit et harmoniques) générées par le découpage temporel et retrouver l'allure des signaux de départ.</p>
+
+                    <h3>3. Difficultés rencontrées et Solutions</h3>
+                    <p><strong>Gérer les tensions :</strong> Parfois, il y a des désaccords dans l'équipe. J'ai appris à écouter les idées de chacun et à reformuler ce qu'ils disent pour calmer les choses, tout en prenant une décision pour faire avancer le groupe.</p>
+                    <p><strong>Prise de parole :</strong> Au début, ce n'était pas facile de parler devant une assemblée. J'ai appris à aller à l'essentiel et à donner des informations précises pour ne pas perdre l'attention des gens pendant les réunions.</p>
+
+                    <h3>4. Bilan et Compétences acquises</h3>
+		    <p> Cette expérience m'a beaucoup appris</p>
+		    <p><strong>Rigueur :</strong>J'ai compris que pour éviter les erreurs, il faut donner des consignes très claires.</p>
+		    <p><strong>Écoute :</strong>Je sais mieux comprendre ce que mon interlocuteur attend pour lui donner la bonne réponse.</p>
+		    <p><strong>Esprit d'équipe :</strong> J'ai appris à créer une bonne ambiance de travail et à faire en sorte que tout le monde avance vers le même but. C'est essentiel pour réussir un projet, que ce soit dans une association ou dans un groupe de TP.</p>
+                    </div> </div> </div> </div> </div> </div> </div> 
+                    <div class="tab-pane fade" id="prog" role="tabpanel">
+    <div class="global-card">
+        <h4 class="fw-bold">🔎 Analyse Globale - Compétence : Programmer</h4>
+        <p>Cette compétence valide la capacité à concevoir des solutions logicielles et à choisir les mécanismes de gestion de données adaptés pour automatiser des tâches réseau.</p>
+        <button class="btn btn-violet" onclick="toggleSection('global-prog-proof')">Voir Analyse Globale</button>
+        <div id="global-prog-proof" class="content-box">
+             <div class="document-paper">
+                    <h2 class="text-center">Analyse Globale : Compétence "Programmer"</h2>
+
+<h3>1. Description (Ce qui s'est passé)</h3>
+<p>Dans le cadre de ma formation, j'ai utilisé la programmation pour résoudre des problèmes techniques et créer des outils de communication. J'ai notamment développé des scripts en Python pour automatiser l'analyse de fichiers de capture réseau (SAE 1.05) afin d'identifier des surcharges de trafic. Parallèlement, j'ai conçu et réalisé mon site e-portfolio en utilisant le HTML et le CSS pour documenter mon parcours académique et associatif.</p>
+
+<h3>2. Sentiments (Ce que j'ai ressenti)</h3>
+<p>La programmation a été un défi stimulant. J'ai ressenti une grande satisfaction en voyant mon script Python transformer des milliers de lignes de texte brut en graphiques clairs et exploitables. Pour mon site web, j'ai éprouvé de la fierté à construire moi-même une interface propre, même si les erreurs de code au début ont parfois été frustrantes.</p>
+
+<h3>3. Évaluation (Le bon et le moins bon)</h3>
+<p><strong>Le positif :</strong> J'ai acquis une bonne maîtrise du flux de données. Je sais désormais choisir le bon outil pour chaque étape : Python pour le calcul, Excel pour la visualisation et le HTML/CSS pour la présentation. Ma capacité à corriger mes propres erreurs de syntaxe s'est aussi nettement améliorée.</p>
+<p><strong>Le négatif :</strong> Au début, j'ai perdu du temps à cause d'un manque d'organisation dans mes fichiers et de petites erreurs de balisage (balises mal fermées). J'ai réalisé que la programmation ne pardonne pas l'inattention, ce qui m'a obligée à devenir beaucoup plus rigoureuse.</p>
+
+<h3>4. Analyse (Comprendre la situation)</h3>
+<p>J'ai compris que programmer est un outil au service du réseau et de la communication. Le code permet de gagner un temps précieux en automatisant des tâches répétitives, comme l'extraction d'adresses IP. Que ce soit pour analyser un "dump" ou pour créer un portfolio, la structure du code est essentielle : un code mal organisé devient très vite impossible à maintenir ou à déboguer.</p>
+
+<h3>5. Conclusion (Ce que j'aurais pu faire d'autre)</h3>
+<p>J'aurais pu commenter mon code de manière plus détaillée dès le début de mes projets. Cela m'aurait évité de devoir relire l'intégralité de mes scripts Python ou de mes pages HTML pour comprendre ma propre logique après quelques jours d'interruption.</p>
+
+<h3>6. Plan d'action</h3>
+<p>Pour mes futurs projets de développement :</p>
+<p><strong>1. Structurer avant de coder :</strong> Je vais systématiser l'organisation de mes dossiers (images, scripts, styles) dès le lancement d'un projet pour éviter les erreurs de chemins relatifs.</p>
+<p><strong>2. Commenter et documenter :</strong> Je m'obligerai à ajouter des commentaires clairs dans mon code pour faciliter la relecture et le travail collaboratif.</p>
+<p><strong>3. Utiliser des outils de validation :</strong> Je vais utiliser plus régulièrement des validateurs de code et l'inspecteur du navigateur pour identifier et corriger les erreurs de syntaxe au fur et à mesure de la rédaction.</p>
+            </div>
+        </div>
+    </div> <div class="accordion" id="accProgram">
+        <div class="accordion-item shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac0314">
+                    AC 03.14 : Connaitre L'architecture et les technologies d'un site WEB
+                </button>
+            </h2>
+            <div id="ac0314" class="accordion-collapse collapse" data-bs-parent="#accProgram">
+                <div class="accordion-body">
+                    <button class="action-btn" onclick="toggleSection('ac0314p')">📂 Voir Preuve</button>
+                    <div id="ac0314p" class="content-box">
+                        <p><strong>Script d'analyse :</strong> Conception d'un programme automatisé pour traiter des fichiers de capture et générer un rapport de diagnostic réseau.</p>
+                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac0314a')">💡 Voir Projet Site</button>
+                    <div id="ac0314a" class="content-box">
+                        <div class="document-paper">
+                            <h2 class="text-center">Analyse Réflexive : Site WEB E-Portfolio</h2>
+                    
+                    <h3>1.Contexte et Responsabilités</h3>
+                    <p>Dans le cadre de ma formation, j'ai dû concevoir et réaliser un site web "e-portfolio". L'objectif était de créer un support numérique pour documenter mes compétences, présenter mes projets (comme mes TP et mes SAE) et retracer mon parcours académique et associatif. J'étais responsable de toute la chaîne : de la structure du site jusqu'à la mise en ligne du contenu.</p>
+
+                    <h3>2. Analyse Technique et Méthodologique</h3>
+                    <p><strong>Conception et Structure :</strong> J'ai commencé par organiser mes projets pour qu'ils soient faciles à trouver. J'ai dû choisir comment présenter mes expériences (Réseaux, Programmation, Vie associative) pour que le site soit clair pour un futur recruteur.</p>
+                    <p><strong>Développement Web (HTML/CSS) :</strong> J'ai utilisé le langage HTML pour construire la structure des pages et le CSS pour la mise en forme (couleurs, polices, disposition). J'ai fait attention à ce que le site soit propre et que la navigation soit fluide entre mon CV et mes analyses de projets.</p>
+                    <p><strong>Valorisation de l'expérience :</strong> J'ai intégré une section spécifique sur mon rôle de présidente à Campus Solidaire. Cela m'a demandé de réfléchir à comment transformer une expérience humaine en compétences professionnelles visibles sur le web.</p>
+
+                    <h3>3. Difficultés rencontrées et Solutions</h3>
+                    <p><strong>Organisation des fichiers :</strong> Au début, la gestion des chemins relatifs pour les images et les liens entre les pages était compliquée (erreurs 404). J'ai résolu cela en structurant mes dossiers de manière rigoureuse (un dossier "images", un dossier "projets") et en vérifiant chaque lien systématiquement.</p>
+                    <p><strong>Erreurs de balisage HTML :</strong> Au début, j'ai eu des problèmes d'affichage car j'avais mal fermé certaines balises ou je les avais mal imbriquées (par exemple, une balise  manquante). Cela cassait toute la structure de ma page. J'ai dû relire mon code ligne par ligne et utiliser un validateur pour trouver et corriger ces erreurs de syntaxe</p>
+
+                    <h3>4. Bilan et Compétences acquises</h3>
+		    <p> Ce projet m'a permis d'apprendre les bases de la création web :</p>
+		    <p><strong>Pratique du code :</strong>Je sais maintenant coder une page web propre en HTML et corriger les erreurs de balisage et de style.</p>
+		    <p><strong>Organisation :</strong>J'ai appris qu'il faut être très ordonné dans son code et bien commenter ses parties pour retrouver les erreurs plus facilement.</p>
+		    <p><strong>Prendre du recul :</strong>Faire ce portfolio m'a aidée à mieux expliquer mon travail et à voir tout ce que j'ai appris depuis le début de l'année.</p>
+            </div>
+        </div></div>
+    </div></div>
+
+        <div class="accordion-item shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#ac0315">
+                    AC 03.15 : Choisir les mécanismes de gestion de données adaptés 
+                </button>
+            </h2>
+            <div id="ac0315" class="accordion-collapse collapse" data-bs-parent="#accProgram">
+                <div class="accordion-body">
+                    <button class="action-btn" onclick="toggleSection('ac0315p')">📂 Voir Preuve</button>
+                    <div id="ac0315p" class="content-box">
+                        <p><strong>Gestion des données :</strong> Utilisation de structures de données pour calculer des statistiques (Top 10 destinations, taux de broadcast de 36.4%).</p>
+                    </div>
+                    <button class="action-btn" onclick="toggleSection('ac0315a')">💡 Voir SAE1.05</button>
+                    <div id="ac0315a" class="content-box">
+                        <div class="document-paper">
+                            <h2 class="text-center">Analyse Réflexive : SAE1.05</h2>
+                    
+                    <h3>1.Contexte et Responsabilités</h3>
+                    <p>Dans cette SAE, ma mission était d'aider une entreprise dont le réseau sature. Mon rôle était d'analyser un fichier de capture réseau (le "dump") pour découvrir l'origine du problème. J'ai dû utiliser mes compétences en Python pour automatiser l'extraction des données, les traiter sous Excel, et enfin présenter mes résultats dans un rapport clair.</p>
+
+                    <h3>2. Analyse Technique et Méthodologique</h3>
+                    <p><strong>Développement d'outils (Python) :</strong> J'ai créé un programme pour extraire les informations importantes du fichier texte (comme les adresses IP de destination). L'objectif était de transformer des milliers de lignes de texte brut en données exploitables.</p>
+                    <p><strong>Traitement et Visualisation :</strong> Une fois les données extraites, je les ai organisées dans un tableau Excel pour créer des graphiques. J'ai aussi généré une page Web en Markdown/HTML pour afficher un rapport visuel simple avec les "Top destinations" et des alertes.</p>
+                    <p><strong>Diagnostic :</strong> En analysant les résultats (par exemple, le trafic vers "broadcasthost"), j'ai pu identifier quel équipement ou quel protocole surchargeait le réseau de l'entreprise.</p>
+
+                    <h3>3. Difficultés rencontrées et Solutions</h3>
+                    <p><strong>Passer du code à l'analyse :</strong> Au début, le plus dur était de savoir quelles informations extraire du fichier texte pour qu'elles soient vraiment utiles dans Excel. J'ai dû faire plusieurs tests avec mon script Python pour réussir à sortir un fichier propre et facile à utiliser.</p>
+                    <p><strong>Rendre les résultats compréhensibles :</strong> Les données réseau sont très techniques. La difficulté était de réussir à créer des graphiques et une notice en anglais qui soient clairs, même pour quelqu'un qui n'a pas fait l'analyse. J'ai dû simplifier ma façon de présenter les alertes pour que le problème puisse être visualié évidemment.</p>
+
+                    <h3>4. Bilan et Compétences acquises</h3>
+		    <p> Cette SAE m'a permis de valider ma capacité à traiter des données complexes de bout en bout :</p>
+		    <p><strong>Maîtrise du flux de données :</strong>Je sais maintenant récupérer des données brutes, les trier avec du code et les transformer en informations utiles (graphiques, tableaux) pour résoudre un problème réel.</p>
+		    <p><strong>Adaptabilité des outils :</strong>J'ai appris à choisir le bon outil pour chaque étape : Python pour la puissance de calcul, Excel pour la visualisation, et le HTML pour la présentation des résultats.</p>
+		    <p><strong>Transformation de la donnée brute :</strong>Je sais maintenant prendre un volume important de données non structurées et les transformer en un outil d'aide à la décision (graphiques et alertes).</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <script>
         function toggleSection(id) {
             const section = document.getElementById(id);
